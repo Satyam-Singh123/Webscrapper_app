@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h2>Tags</h2>
+    <h3>1.Love&emsp;2.Inspiration&emsp;3.Life&emsp;4.Humor&emsp;5.Books </h3>
+    <h3>6.Books&emsp;7.Reading&emsp;8.Friendship&emsp;9.Friend&emsp;10.Simile</h3>
+
+
+    <div class="form">
+        <form action="/quotes" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+{% endblock %}

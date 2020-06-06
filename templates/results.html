@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Quotes Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">Quotes</div>
+
+   <table cellspacing="0">
+      <tr>
+         <th>Auhtor</th>
+         <th width="500">Quote</th>
+      </tr>
+         {% for quote in Quotes %}
+      <tr>
+          <td>{{quote['Author']}}</td>
+         <td>{{quote['Quote']}}</td>
+
+       {% endfor %}
+   </table>
+</div>
+
+</body>
+
+</html>
